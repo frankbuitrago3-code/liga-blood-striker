@@ -4,10 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Liga Blood Striker LATAM 2025</title>
-  
-  <!-- Font Awesome para iconos -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pap..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -20,8 +17,11 @@
     <p>Competencia por clanes más competitivos de Latinoamérica</p>
     <nav>
       <a href="#clasificacion">Clasificación</a>
+      <a href="#top-kills">Top Jugadores</a>
       <a href="#quienes-somos">Quiénes Somos</a>
       <a href="#organizadores">Organizadores</a>
+      <a href="#premiacion">Premiación</a>
+      <a href="#patrocinadores">Patrocinadores</a>
       <a href="#contactos">Contactos</a>
     </nav>
   </header>
@@ -43,10 +43,10 @@
       </table>
     </section>
 
-    <!-- Top 5 Jugadores con más Kills -->
+    <!-- Top 5 Jugadores -->
     <section id="top-kills" class="cards-section">
       <h2>🔥 Top 5 Jugadores con más Kills</h2>
-      <div class="cards-container" id="top-kills-container"></div>
+      <div class="cards-container top5-jugadores"></div>
     </section>
 
     <!-- Quiénes Somos -->
@@ -89,6 +89,43 @@
       </div>
     </section>
 
+    <!-- Premiación -->
+    <section id="premiacion" class="cards-section">
+      <h2>🏅 Premiación</h2>
+      <div class="cards-container">
+        <div class="card">
+          <h3>Primer Lugar</h3>
+          <p>Recompensa: 30€</p>
+          <p>Este clan se convierte en <strong>Clan Oficial</strong> y tendrá su cupo asegurado en la siguiente temporada.</p>
+        </div>
+        <div class="card">
+          <h3>Segundo Lugar</h3>
+          <p>Recompensa: 20€</p>
+        </div>
+        <div class="card">
+          <h3>Tercer Lugar</h3>
+          <p>Recompensa: 10€</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Patrocinadores / Publicidad -->
+    <section id="patrocinadores" class="cards-section">
+      <h2>💼 Patrocinadores y Publicidad</h2>
+      <div class="cards-container">
+        <div class="card">
+          <h3>Quiero ser patrocinador</h3>
+          <p>Si deseas apoyar la liga y obtener visibilidad en la comunidad, contáctanos para conocer nuestras opciones de patrocinio.</p>
+          <p><a href="mailto:contacto@ligabloodstriker.com">contacto@ligabloodstriker.com</a></p>
+        </div>
+        <div class="card">
+          <h3>Publicidad Oficial</h3>
+          <p>Empresas o marcas que quieran aparecer en la plataforma pueden enviarnos su propuesta y media kit.</p>
+          <p><a href="mailto:publicidad@ligabloodstriker.com">publicidad@ligabloodstriker.com</a></p>
+        </div>
+      </div>
+    </section>
+
     <!-- Contactos -->
     <section id="contactos" class="cards-section">
       <h2>📞 Contactos</h2>
@@ -116,5 +153,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
-
