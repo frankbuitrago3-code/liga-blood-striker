@@ -1,8 +1,10 @@
+// =========================
 // Cargar datos desde datos.json
+// =========================
 fetch('datos.json')
   .then(response => response.json())
   .then(datos => {
-    
+
     // -------------------------
     // 1️⃣ Tabla de Clanes
     // -------------------------
@@ -27,7 +29,7 @@ fetch('datos.json')
     });
 
     // Animación de barras de puntos
-    const barras = document.querySelectorAll('.relleno');
+    const barras = document.querySelectorAll('#tabla-clanes .relleno');
     clanesOrdenados.forEach((clan, i) => {
       setTimeout(() => {
         barras[i].style.width = `${(clan.puntos / clanesOrdenados[0].puntos) * 100}%`;
@@ -51,11 +53,18 @@ fetch('datos.json')
           <h3>${index + 1}. ${jugador.nombre}</h3>
           <p>Clan: ${jugador.clan}</p>
           <p>Kills: ${jugador.kills}</p>
+          <span class="barra"><span class="relleno" style="width:0%"></span></span>
         `;
         top5Container.appendChild(card);
+
+        // Animar barra de kills proporcional al máximo
+        const maxKills = top5[0].kills;
+        const relleno = card.querySelector('.relleno');
+        setTimeout(() => {
+          relleno.style.width = `${(jugador.kills / maxKills) * 100}%`;
+        }, 200);
       });
     }
 
   })
   .catch(error => console.error('Error al cargar datos.json:', error));
-
