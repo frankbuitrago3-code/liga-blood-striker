@@ -4,9 +4,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Liga Blood Striker LATAM 2025</title>
+  
+  <!-- Font Awesome para iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pap..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <!-- Canvas para partículas de fondo -->
+  <canvas id="particles-canvas"></canvas>
+
   <header>
     <img src="logo.png" alt="Logo Liga Blood Striker" class="logo">
     <h1>Liga Blood Striker LATAM 2025</h1>
@@ -32,25 +39,14 @@
             <th>Kills</th>
           </tr>
         </thead>
-        <tbody>
-          <tr data-puntos="15" data-kills="25"><td>1</td><td>[FK] Warriors</td><td class="puntaje"><span class="barra"><span class="relleno" style="width:0%"></span></span> 15</td><td class="kills">25</td></tr>
-          <tr data-puntos="12" data-kills="20"><td>2</td><td>[RZ] Legends</td><td class="puntaje"><span class="barra"><span class="relleno" style="width:0%"></span></span> 12</td><td class="kills">20</td></tr>
-          <tr data-puntos="10" data-kills="18"><td>3</td><td>[XY] Titans</td><td class="puntaje"><span class="barra"><span class="relleno" style="width:0%"></span></span> 10</td><td class="kills">18</td></tr>
-          <tr data-puntos="8" data-kills="16"><td>4</td><td>[AB] Dragons</td><td class="puntaje"><span class="barra"><span class="relleno" style="width:0%"></span></span> 8</td><td class="kills">16</td></tr>
-          <tr data-puntos="8" data-kills="14"><td>5</td><td>[CD] Hunters</td><td class="puntaje"><span class="barra"><span class="relleno" style="width:0%"></span></span> 8</td><td class="kills">14</td></tr>
-          <tr data-puntos="6" data-kills="12"><td>6</td><td>[EF] Phantom</td><td class="puntaje"><span class="barra"><span class="relleno" style="width:0%"></span></span> 6</td><td class="kills">12</td></tr>
-          <tr data-puntos="6" data-kills="10"><td>7</td><td>[GH] Raiders</td><td class="puntaje"><span class="barra"><span class="relleno" style="width:0%"></span></span> 6</td><td class="kills">10</td></tr>
-          <tr data-puntos="5" data-kills="9"><td>8</td><td>[IJ] TitansX</td><td class="puntaje"><span class="barra"><span class="relleno" style="width:0%"></span></span> 5</td><td class="kills">9</td></tr>
-          <tr data-puntos="4" data-kills="8"><td>9</td><td>[KL] Vipers</td><td class="puntaje"><span class="barra"><span class="relleno" style="width:0%"></span></span> 4</td><td class="kills">8</td></tr>
-          <tr data-puntos="4" data-kills="7"><td>10</td><td>[MN] Wolves</td><td class="puntaje"><span class="barra"><span class="relleno" style="width:0%"></span></span> 4</td><td class="kills">7</td></tr>
-          <tr data-puntos="3" data-kills="6"><td>11</td><td>[OP] Eagles</td><td class="puntaje"><span class="barra"><span class="relleno" style="width:0%"></span></span> 3</td><td class="kills">6</td></tr>
-          <tr data-puntos="3" data-kills="5"><td>12</td><td>[QR] TitansPro</td><td class="puntaje"><span class="barra"><span class="relleno" style="width:0%"></span></span> 3</td><td class="kills">5</td></tr>
-          <tr data-puntos="2" data-kills="4"><td>13</td><td>[ST] Hawks</td><td class="puntaje"><span class="barra"><span class="relleno" style="width:0%"></span></span> 2</td><td class="kills">4</td></tr>
-          <tr data-puntos="2" data-kills="3"><td>14</td><td>[UV] Spartans</td><td class="puntaje"><span class="barra"><span class="relleno" style="width:0%"></span></span> 2</td><td class="kills">3</td></tr>
-          <tr data-puntos="1" data-kills="2"><td>15</td><td>[WX] Panthers</td><td class="puntaje"><span class="barra"><span class="relleno" style="width:0%"></span></span> 1</td><td class="kills">2</td></tr>
-          <tr data-puntos="1" data-kills="1"><td>16</td><td>[YZ] TitansElite</td><td class="puntaje"><span class="barra"><span class="relleno" style="width:0%"></span></span> 1</td><td class="kills">1</td></tr>
-        </tbody>
+        <tbody></tbody>
       </table>
+    </section>
+
+    <!-- Top 5 Jugadores con más Kills -->
+    <section id="top-kills" class="cards-section">
+      <h2>🔥 Top 5 Jugadores con más Kills</h2>
+      <div class="cards-container" id="top-kills-container"></div>
     </section>
 
     <!-- Quiénes Somos -->
@@ -75,18 +71,20 @@
         <div class="card">
           <h3>FK.B.J</h3>
           <p>Redes Sociales:</p>
-          <ul>
-            <li><a href="https://www.instagram.com/fkbj" target="_blank">Instagram</a></li>
-            <li><a href="https://www.tiktok.com/@fkbj" target="_blank">TikTok</a></li>
-          </ul>
+          <div class="social-icons">
+            <a href="https://www.tiktok.com/@F.K.B.J" target="_blank" class="icon"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/frank_kevyn" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/provicion1" target="_blank" class="icon"><i class="fab fa-facebook"></i></a>
+          </div>
         </div>
         <div class="card">
           <h3>Rizplay</h3>
           <p>Redes Sociales:</p>
-          <ul>
-            <li><a href="https://www.instagram.com/el_cuaja" target="_blank">Instagram</a></li>
-            <li><a href="https://www.tiktok.com/@el_cuaja" target="_blank">TikTok</a></li>
-          </ul>
+          <div class="social-icons">
+            <a href="https://www.tiktok.com/@Elkuaja_" target="_blank" class="icon"><i class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/larizza_21" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/provicion2" target="_blank" class="icon"><i class="fab fa-facebook"></i></a>
+          </div>
         </div>
       </div>
     </section>
@@ -100,8 +98,8 @@
           <p>contacto@ligabloodstriker.com</p>
         </div>
         <div class="card">
-          <h3>Teléfono</h3>
-          <p>+52 123 456 7890</p>
+          <h3>Teléfono / WhatsApp</h3>
+          <p><a href="https://wa.me/34691236561" target="_blank" class="icon"><i class="fab fa-whatsapp"></i></a></p>
         </div>
         <div class="card">
           <h3>Web</h3>
@@ -118,4 +116,3 @@
   <script src="script.js"></script>
 </body>
 </html>
-
