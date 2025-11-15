@@ -1,7 +1,7 @@
 {
   "clanes": [
     { "nombre": "[vxs] vixcious queen`s", "puntos": 15, "kills": 35 },
-    { "nombre": "[RZ] Legends", "puntos": 12, "kills": 28 },
+    { "nombre": "[FX] FLYX ", "puntos": 12, "kills": 28 },
     { "nombre": "[XY] Titans", "puntos": 10, "kills": 25 },
     { "nombre": "[AB] Dragons", "puntos": 8, "kills": 22 },
     { "nombre": "[CD] Hunters", "puntos": 8, "kills": 20 },
@@ -26,5 +26,6 @@
     { "nombre": "Javier [CD]", "clan": "[CD] Hunters", "kills": 20 }
   ]
 }
+
 
 
